@@ -164,7 +164,7 @@ const Navbar = () => {
               </li>
             </ul>
 
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
           </div>
         </div>
         <div
