@@ -16,6 +16,7 @@ const CardSwiper = () => {
           "https://sthg.labtekcmr.com/api/cms/getFasilitas"
         );
         setData(response.data.data);
+        console.log(response.data.data);
       } catch (error) {
         console.error(error);
       }

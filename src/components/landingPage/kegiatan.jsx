@@ -9,6 +9,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { CardPlacehoderSkeleton } from "../selecton/cardBerita";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Typography,
+} from "@material-tailwind/react";
+import { ChevronRight } from "lucide-react";
 
 export function KegiatanSTHG() {
   const [kegiatan, setKegiatan] = useState([]);
@@ -28,53 +37,37 @@ export function KegiatanSTHG() {
   }, []);
   console.log("Kegiatan", kegiatan);
   return (
-    <div className="w-full bg-white pb-20">
-      <div className="flex justify-center w-full items-center relative py-10 md:py-16 md:px-16 ">
-        <h1
-          className={`font-bold text-3xl md:text-3xl text-center text-[#01012e]`}
-        >
-          Kegiatan STHG
+    <div className="w-full  px-6 md:px-16 border-b-2 pb-20">
+      <div className="flex justify-between w-full items-center py-10">
+        <h1 className={`font-bold text-3xl md:text-3xl text-start text-[#000]`}>
+          KEGIATAN STHG
         </h1>
       </div>
 
-      <div className="w-full relative px-6 md:px-16 py-10 mx-auto pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="w-full relative  py-10 mx-auto pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {kegiatan.length === 0 && <CardPlacehoderSkeleton />}
-        {kegiatan.map((item, index) => (
-          <article className="overflow-hidden rounded-lg shadow-lg transition bg-white hover:shadow-lg">
-            <img alt="" src={item.foto} className="h-56 w-full object-cover" />
 
-            <div className="p-4 sm:p-6">
-              <time
-                datetime="2022-10-10"
-                className="block text-xs text-gray-500"
-              >
-                {" "}
-                10th Oct 2022{" "}
-              </time>
-
+        {kegiatan.map((item, key) => (
+          <Card className="mt-6 w-full">
+            <CardHeader color="blue-gray" className="relative h-56">
+              <img src={item.foto} alt="card-image" />
+            </CardHeader>
+            <CardBody>
+              <Typography variant="h5" color="blue-gray" className="mb-2">
+                {item.judul}
+              </Typography>
+              <Typography>
+                {item.deskripsi_kegiatan.split(" ").slice(0, 100).join(" ")}
+                {item.deskripsi_kegiatan.split(" ").length > 100 && "..."}
+              </Typography>
+            </CardBody>
+            <CardFooter className="pt-0">
               <a href={`/detail-kegiatan/${item.id_kegiatan}`}>
-                <h3 className="mt-0.5 text-lg text-gray-900">{item.judul}</h3>
+                <Button> Read More</Button>
               </a>
-
-              <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Recusandae dolores, possimus pariatur animi temporibus nesciunt
-                praesentium dolore sed nulla ipsum eveniet corporis quidem,
-                mollitia itaque minus soluta, voluptates neque explicabo tempora
-                nisi culpa eius atque dignissimos. Molestias explicabo corporis
-                voluptatem?
-              </p>
-            </div>
-          </article>
+            </CardFooter>
+          </Card>
         ))}
-      </div>
-      <div className="flex justify-center">
-        <a
-          href="#"
-          className="mt-8 inline-block rounded bg-gradient-to-r from-red-700 to-black hover:bg-gradient-to-r hover:from-black hover:to-red-700 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:ring focus:ring-yellow-400"
-        >
-          Kegiatan Lainnya
-        </a>
       </div>
     </div>
   );

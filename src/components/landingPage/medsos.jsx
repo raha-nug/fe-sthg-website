@@ -4,7 +4,13 @@ const Medsos = () => {
   return (
     <section className="w-full px-5 md:px-16 pb-16">
       <div>
-        <JudulComponent title={"Sosial Media"} />
+        <div className="flex justify-between w-full items-center py-10">
+          <h1
+            className={`font-bold text-3xl mt-10 md:text-3xl text-start text-[#000]`}
+          >
+            MEDIA SOSIAL
+          </h1>
+        </div>
         <div className="flex flex-col md:flex-row w-full pt-8">
           <div className="w-full md:w-1/2">
             <div>

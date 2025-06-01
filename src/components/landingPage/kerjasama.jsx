@@ -28,8 +28,12 @@ const Kerjasama = () => {
     getData();
   }, []);
   return (
-    <div className="w-full relative px-6 md:px-16">
-      <JudulComponent title={"Kerjasama Kami"} />
+    <div className="w-full relative px-6 md:px-16 border-b-2 py-10">
+      <div className="flex justify-between w-full items-center mb-10">
+        <h1 className={`font-bold text-3xl md:text-3xl text-start text-[#000]`}>
+          KERJASAMA KAMI
+        </h1>
+      </div>
       <div className=" relative">
         <div className="absolute top-1/2 transform -translate-y-1/2 left-0 z-10">
           <button

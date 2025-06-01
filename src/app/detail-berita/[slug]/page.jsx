@@ -6,23 +6,11 @@ import axios from "axios";
 import { useParams } from "next/navigation";
 
 const DetailBerita = () => {
-  const [berita, setBerita] = useState([]);
   const [detail, setDetail] = useState([]);
   const { slug } = useParams();
   console.log(slug);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getBerita"
-        );
-        setBerita(response.data.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
     const fetchDetail = async () => {
       try {
         const response = await axios.get(
@@ -35,10 +23,9 @@ const DetailBerita = () => {
     };
 
     fetchDetail();
-    fetchData();
   }, []);
   console.log(detail);
-  console.log(berita);
+
   return (
     <>
       <div className="w-full py-36 px-6  md:py-48 flex md:px-16">
@@ -126,50 +113,6 @@ const DetailBerita = () => {
             <div className="w-full lg:w-[70%]">
               <img src={detail.foto} alt="" className="py-8" />
               <p className="text-justify">{detail.deskripsi}</p>
-            </div>
-            <div className="hidden lg:block lg:w-[30%] mt-8">
-              <ul className="w-full h-max-w-screen-xl overflow-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                {berita.map((item, key) => (
-                  <li
-                    key={key}
-                    className="w-full  px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600"
-                  >
-                    <article className="flex flex-col  bg-white transition hover:shadow-xl">
-                      <div className=" p-2 ">
-                        <time
-                          dateTime={item.tanggal_berita}
-                          className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-                        >
-                          <span>{item.tanggal_berita}</span>
-                        </time>
-                      </div>
-
-                      <div className="flex flex-1 flex-col justify-between">
-                        <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-                          <a href="#">
-                            <h3 className="font-bold uppercase text-gray-900">
-                              {item.judul}
-                            </h3>
-                          </a>
-
-                          <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                            {item.deskripsi}
-                          </p>
-                        </div>
-
-                        <div className="sm:flex sm:items-end sm:justify-end">
-                          <a
-                            href="#"
-                            className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-                          >
-                            Read Blog
-                          </a>
-                        </div>
-                      </div>
-                    </article>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>

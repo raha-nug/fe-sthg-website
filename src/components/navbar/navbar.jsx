@@ -1,10 +1,9 @@
 "use client";
 import "animate.css";
-
-import { SidebarWithBurgerMenu } from "./Sidebar";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import LanguageSwitcher from "../LanguageSwitcher";
+import SidebarMobile from "./sidebarMobile";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -51,7 +50,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`top-0 fixed font-sans dark:bg-gray-900 w-full z-[9999] transition-transform animate__animated animate__fadeInDown`}
+        className={`top-0 hidden lg:block fixed font-sans dark:bg-gray-900 w-full z-[9999] transition-transform animate__animated animate__fadeInDown`}
       >
         {/* Hide */}
         <div
@@ -189,10 +188,6 @@ const Navbar = () => {
                 className="w-14"
               />
             </div>
-
-            <div className=" lg:hidden">
-              <SidebarWithBurgerMenu />
-            </div>
           </div>
           <div className="hidden lg:flex items-center  gap-4 w-full  h-full">
             <ul className="flex gap-4 items-center justify-end  text-white w-full  h-full ">
@@ -309,29 +304,11 @@ const Navbar = () => {
                         Siakad
                       </a>
                     </li>
-                    <li className="hover:bg-gradient-to-r  text-black from-red-700 to-black hover:text-white w-full">
-                      <a href="" className="w-full h-full rounded-none">
-                        Peraktik Peradilan Lapangan
-                      </a>
-                    </li>
-                    <li className="hover:bg-gradient-to-r  text-black from-red-700 to-black hover:text-white w-full">
-                      <a
-                        href="/akademik/tatacara-pembayaran"
-                        className="w-full h-full rounded-none"
-                      >
-                        Tata Cara Pembayaran
-                      </a>
-                    </li>
                   </ul>
                   <div className="absolute left-0 right-0 bottom-3 h-[4px] bg-transparent group-hover:bg-white transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
                 </div>
               </li>
 
-              <li>
-                <a href="/kontak" className="uppercase">
-                  Kontak
-                </a>
-              </li>
               <li>
                 <a
                   href="https://jurnal.sthg.ac.id/index.php/jurnal/index"
@@ -343,7 +320,10 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
+
+        {/* Sidebar menu for mobile */}
       </nav>
+      <SidebarMobile />
     </>
   );
 };

@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Jumbotron from "@/items/jumbotron";
+import Sambutan from "@/components/landingPage/Sambutan";
+import Image from "next/image";
 
 const Sejarah = () => {
   const [data, setData] = useState([]);
@@ -93,118 +95,28 @@ const Sejarah = () => {
           </li>
         </ol>
       </nav>
-      <div className="px-4 md:px-16 bg-[#01012e]">
-        <div className="text-center flex items-center justify-center">
-          <h1 className="mt-10 text-3xl text-white p-4 border-b-4 border-yellow-400">
-            Pimpinan
-          </h1>
-        </div>
-        <div className="py-10">
-          <div className="w-full">
-            <section className="overflow-hidden bg-gray-50 rounded-lg sm:grid sm:grid-cols-2 sm:items-center">
-              <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-                <div className="mx-auto max-w-xl text-start ltr:sm:text-left rtl:sm:text-right">
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
-                      Pimpinan STHG
-                    </h2>
-                    <h2 className="text-2xl font-bold text-gray-900 md:text-xl">
-                      Herdy Mulyana, S.H, M.H
-                    </h2>
-                  </div>
-
-                  <p className="hidden text-gray-500 md:mt-4 md:block">
-                    Prof. Reini Wirahadikusumah, Ph.D. adalah rektor wanita
-                    pertama di Institut Teknologi Bandung untuk periode
-                    2020-2025 yang melanjutkan kepemimpinan Prof. Dr. Ir.
-                    Kadarsah Suryadi, DEA sebagai rektor Institut Teknologi
-                    Bandung periode 2015-2020.
-                  </p>
-
-                  <div className="mt-4 md:mt-8">
-                    <a
-                      href="#"
-                      className="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
-                    >
-                      Get Started Today
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <img
-                alt="Pimpinan"
-                src="https://images.unsplash.com/photo-1484959014842-cd1d967a39cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
-              />
-            </section>
-          </div>
-        </div>
-      </div>
+      <Sambutan />
       <div className="px-4 md:px-16">
-        <div className="text-center flex items-center justify-center">
-          <h1 className="mt-10 text-3xl p-4 border-b-4 border-yellow-400">
-            History
-          </h1>
-        </div>
-
-        <section className="bg-gray-50 rounded-lg my-10">
+        <section className=" my-10">
           <div className="p-4 md:p-8 flex flex-col gap-10">
             {data.map((item, key) => (
               <div key={key} className="w-full text-justify">
                 <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
                   {item.judul}
                 </h2>
+                <Image
+                  className="my-5"
+                  src={item.foto}
+                  width={500}
+                  height={500}
+                  alt={item.judul}
+                />
 
                 <p className="text-gray-500 sm:mt-4 sm:block">
                   {item.deskripsi_sejarah}
                 </p>
               </div>
             ))}
-            <ol className="relative border-s border-gray-200 dark:border-gray-700">
-              <li className="mb-10 ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                  1971
-                </time>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Pemakaian nama STHG
-                </h3>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  Setiap tahunnya pada bulan Januari, biasanya terdapat kegiatan
-                  rencana, baik yang bersifat lokal, nasional, bahkan
-                  internasional.
-                </p>
-              </li>
-              <li className="mb-10 ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                  1973
-                </time>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Beasiswa STHG
-                </h3>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  Setiap tahunnya pada bulan Januari, biasanya terdapat kegiatan
-                  rencana, baik yang bersifat lokal, nasional, bahkan
-                  internasional.
-                </p>
-              </li>
-              <li className="ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                  1975
-                </time>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Rencana ke depan
-                </h3>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  Setiap tahunnya pada bulan Januari, biasanya terdapat kegiatan
-                  rencana, baik yang bersifat lokal, nasional, bahkan
-                  internasional.
-                </p>
-              </li>
-            </ol>
           </div>
         </section>
       </div>

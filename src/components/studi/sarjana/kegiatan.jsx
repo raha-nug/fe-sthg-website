@@ -24,29 +24,25 @@ const Kegiatan = () => {
       <h1 className="text-3xl font-bold text-center py-10">Kegiatan Prodi</h1>
 
       <div className="flex gap-4 flex-col-reverse md:flex-row md:justify-center">
-        {data.map((data, index) => (
+        {data.map((item, index) => (
           <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-            <img
-              alt=""
-              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-              className="h-56 w-full object-cover"
-            />
+            <img alt="" src={item.foto} />
 
             <div className="bg-white p-4 sm:p-6">
-              <time
+              {/* <time
                 datetime="2022-10-10"
                 className="block text-xs text-gray-500"
               >
                 {" "}
                 10th Oct 2022{" "}
-              </time>
+              </time> */}
 
               <a href="#">
-                <h3 className="mt-0.5 text-lg text-gray-900">{data.judul}</h3>
+                <h3 className="mt-0.5 text-lg text-gray-900">{item.judul}</h3>
               </a>
 
               <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-                {data.deskripsi_kegiatan}
+                {item.deskripsi_kegiatan}
               </p>
             </div>
           </article>
