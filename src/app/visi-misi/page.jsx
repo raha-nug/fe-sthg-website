@@ -2,18 +2,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Jumbotron from "@/items/jumbotron";
-import {
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-  Tab,
-  TabPanel,
-  Tabs,
-  TabsBody,
-  TabsHeader,
-  Typography,
-} from "@material-tailwind/react";
 
 export default function VisiMisi() {
   const [data, setData] = useState([]);
@@ -55,7 +43,7 @@ export default function VisiMisi() {
         <div className="mb-14">
           <div className="mx-auto max-w-3xl ">
             <h2 className="text-3xl font-bold sm:text-4xl uppercase">
-              {data[0].judul}
+              {data[0]?.judul || "Visi dan Misi"}
             </h2>
             <p className="mt-4 text-black">
               Sekolah Tinggi Hukum Galunggung (STHG) Tasikmalaya memiliki visi
@@ -65,11 +53,11 @@ export default function VisiMisi() {
           </div>
           <div className="mx-auto max-w-3xl  mt-5">
             <h2 className="text-xl font-bold sm:text-2xl ">Visi</h2>
-            <p className="mt-4 text-black">{data[0].visi}</p>
+            <p className="mt-4 text-black">{data[0]?.visi || "Visi"}</p>
           </div>
           <div className="mx-auto max-w-3xl  mt-5">
             <h2 className="text-xl font-bold sm:text-2xl ">Misi</h2>
-            <p className="mt-4 text-black">{data[0].misi}</p>
+            <p className="mt-4 text-black">{data[0]?.misi || "Misi"}</p>
           </div>
         </div>
       </section>
