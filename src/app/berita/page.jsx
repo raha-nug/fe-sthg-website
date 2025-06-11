@@ -10,7 +10,7 @@ const Berita = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getBerita"
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getBerita"
         );
         setBerita(response.data.data);
       } catch (error) {

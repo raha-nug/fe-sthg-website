@@ -13,7 +13,7 @@ const Akreditasi = () => {
       try {
         console.log("🔄 Fetching data...");
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getAkreditasiS1",
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getAkreditasiS1",
           {
             headers: {
               "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const Akreditasi = () => {
       try {
         console.log("🔄 Fetching data...");
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getAkreditasiKampus",
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getAkreditasiKampus",
           {
             headers: {
               "Content-Type": "application/json",
@@ -49,7 +49,7 @@ const Akreditasi = () => {
       try {
         console.log("🔄 Fetching data...");
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getAkreditasiKampus",
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getAkreditasiKampus",
           {
             headers: {
               "Content-Type": "application/json",

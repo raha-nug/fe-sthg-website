@@ -15,7 +15,7 @@ const Kerjasama = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://sthg.labtekcmr.com/api/cms/getKerjasamaSTHG"
+        process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getKerjasamaSTHG"
       );
       setData(response.data.data);
     } catch (error) {

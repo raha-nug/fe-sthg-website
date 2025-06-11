@@ -11,7 +11,7 @@ const JumbotronKaprodi = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getStafS2Hukum"
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getStafS2Hukum"
         );
 
         setData(response.data.data);

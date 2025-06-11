@@ -14,7 +14,7 @@ const DetailKegiatan = () => {
     const fetchDetail = async () => {
       try {
         const response = await axios.post(
-          `https://sthg.labtekcmr.com/api/cms/detailKegiatan`,
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+`/api/cms/detailKegiatan`,
           {
             id_kegiatan: id,
           }

@@ -1472,7 +1472,7 @@ export function DefaultStepper() {
     // }
     try {
       const response = await axios.post(
-        "https://sthg.labtekcmr.com/api/addTracer",
+        process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/addTracer",
         formData,
         {
           headers: {

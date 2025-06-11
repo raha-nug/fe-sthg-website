@@ -9,7 +9,7 @@ const Kegiatan = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://sthg.labtekcmr.com/api/cms/getKegiatanS1Hukum"
+        process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getKegiatanS1Hukum"
       );
       setData(response.data.data);
     } catch (error) {

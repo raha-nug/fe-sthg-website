@@ -26,7 +26,7 @@ export function KegiatanSTHG() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getKegiatan"
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getKegiatan"
         );
         setKegiatan(response.data.data);
       } catch (error) {

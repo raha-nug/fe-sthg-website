@@ -14,7 +14,7 @@ const DetailBerita = () => {
     const fetchDetail = async () => {
       try {
         const response = await axios.get(
-          `https://sthg.labtekcmr.com/api/cms/detailBerita/${slug}`
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+`/api/cms/detailBerita/${slug}`
         );
         setDetail(response.data.data);
       } catch (error) {

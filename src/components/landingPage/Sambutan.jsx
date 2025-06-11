@@ -25,7 +25,7 @@ const Sambutan = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getSambutan"
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getSambutan"
         );
 
         setData(response.data.data);
