@@ -28,7 +28,7 @@ const DetailKegiatan = () => {
     fetchDetail();
   }, []);
   console.log(detail);
-  console.log(kegiatan);
+ 
 
   const formatDate = (dateString) => {
     return dateString.split("T")[0];

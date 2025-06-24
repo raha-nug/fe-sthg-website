@@ -19,8 +19,7 @@ const Footer = () => {
                   <span className="text-4xl font-bold text-black">STHG</span>
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                 Sekolah Tinggi Hukum Galunggung
                 </p>
                 <div className="flex items-center">
                   <a

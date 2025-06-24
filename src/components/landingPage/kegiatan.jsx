@@ -48,7 +48,7 @@ export function KegiatanSTHG() {
         {kegiatan.length === 0 && <CardPlacehoderSkeleton />}
 
         {kegiatan.map((item, key) => (
-          <Card className="mt-6 w-full">
+          <Card key={key} className="mt-6 w-full">
             <CardHeader color="blue-gray" className="relative h-56">
               <img src={item.foto} alt="card-image" />
             </CardHeader>
