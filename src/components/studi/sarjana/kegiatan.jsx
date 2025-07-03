@@ -9,7 +9,7 @@ const Kegiatan = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://sthg.labtekcmr.com/api/cms/getKegiatanS1Hukum"
+        `${process.env.NEXT_PUBLIC_API_URL}/api/cms/getKegiatanS1Hukum`
       );
       setData(response.data.data);
     } catch (error) {
@@ -23,23 +23,16 @@ const Kegiatan = () => {
     <div className="mx-6 md:mx-16 pb-10">
       <h1 className="text-3xl font-bold text-center py-10">Kegiatan Prodi</h1>
 
-      <div className="flex gap-4 flex-col-reverse md:flex-row md:justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
         {data.map((item, index) => (
-          <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-            <img alt="" src={item.foto} />
+          <article
+            key={index}
+            className="overflow-hidden rounded-lg shadow transition hover:shadow-lg max-w-sm w-full"
+          >
+            <img alt="" src={item.foto} className="w-full h-48 object-cover" />
 
             <div className="bg-white p-4 sm:p-6">
-              {/* <time
-                datetime="2022-10-10"
-                className="block text-xs text-gray-500"
-              >
-                {" "}
-                10th Oct 2022{" "}
-              </time> */}
-
-              <a href="#">
-                <h3 className="mt-0.5 text-lg text-gray-900">{item.judul}</h3>
-              </a>
+              <h3 className="mt-0.5 text-lg text-gray-900">{item.judul}</h3>
 
               <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
                 {item.deskripsi_kegiatan}

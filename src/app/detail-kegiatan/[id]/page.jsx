@@ -14,7 +14,7 @@ const DetailKegiatan = () => {
     const fetchDetail = async () => {
       try {
         const response = await axios.post(
-          `https://sthg.labtekcmr.com/api/cms/detailKegiatan`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/cms/detailKegiatan`,
           {
             id_kegiatan: id,
           }
@@ -28,7 +28,6 @@ const DetailKegiatan = () => {
     fetchDetail();
   }, []);
   console.log(detail);
-  console.log(kegiatan);
 
   const formatDate = (dateString) => {
     return dateString.split("T")[0];

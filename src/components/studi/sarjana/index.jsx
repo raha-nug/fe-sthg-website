@@ -116,7 +116,7 @@ const prospek = [
   },
   {
     id: 19,
-    nilai: "DLL",
+    nilai: "LAINNYA",
     keterangan:
       "Prospek karir lainnya dalam bidang hukum yang meliputi berbagai posisi di sektor publik dan swasta yang memerlukan pengetahuan hukum dan keterampilan analitis.",
   },
@@ -205,23 +205,19 @@ const Sarjana = () => {
                   className="text-3xl font-bold sm:text-4xl delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0"
                   data-taos-offset="300"
                 >
-                  Program Studi Ilmu Hukum
+                  Program Studi S1 Hukum
                 </h2>
 
                 <p className="mt-4 text-gray-300">
-                  Program studi Ilmu Hukum merupakan bidang studi yang mendalami
-                  beragam sistem hukum, baik di tingkat nasional maupun
-                  internasional, yang secara langsung berpengaruh pada kehidupan
-                  sosial masyarakat dan dunia bisnis. Selain itu, mahasiswa Ilmu
-                  Hukum akan mempelajari berbagai cabang ilmu hukum yang
-                  meliputi Hukum Tata Negara, Hukum Administrasi Negara, Hukum
-                  Adat, Hukum Agraria, Hukum Internasional, Hukum Dagang, Hukum
-                  Perdata, Hukum Pidana, Hukum Islam, Hukum Lingkungan, Hukum
-                  Pajak, Ilmu Perundang-undangan, Hukum Pemerintah Daerah, dan
-                  masih banyak lagi. Dengan demikian, mahasiswa Ilmu Hukum akan
-                  dibekali dengan pengetahuan yang luas dan mendalam mengenai
-                  berbagai aspek hukum yang relevan dengan berbagai sektor
-                  kehidupan dan kegiatan bisnis di era globalisasi ini.
+                  Program studi ilmu hukum mempelajari berbagai sistem hukum
+                  baik sistem Hukum Nasional maupun sistem Hukum Internasional
+                  yang akan berkaitan dengan kehidupan kemasyarakatan maupun
+                  kegiatan bisnis. Program Studi ilmu hukum mempelajari berbagai
+                  ilmu hukum termasuk di dalam nya : Hukum Tata Negara, Hukum
+                  Administrasi Negara, Hukum Adat, Hukum Agraria, Hukum
+                  Internasional, Hukum Dagang, Hukum Perdata, Hukum Pidana,
+                  Hukum Islam, Hukum Lingkungan, Hukum Pajak, Ilmu
+                  Perundang-undangan, Hukum Pemerintah Daerah dll.
                 </p>
               </div>
             </div>
@@ -236,14 +232,11 @@ const Sarjana = () => {
         <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-16 lg:py-16">
           <div className="max-w-xl">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Prospek Karir di Program Studi Ilmu Hukum
+              Prospek Karir di Program Studi S1 Hukum
             </h2>
 
             <p className="mt-4 text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              dolores iure fugit totam iste obcaecati. Consequatur ipsa quod
-              ipsum sequi culpa delectus, cumque id tenetur quibusdam, quos fuga
-              minima.
+              Berikut adalah prospek karir di program studi S1 Hukum:
             </p>
           </div>
 

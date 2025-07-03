@@ -37,10 +37,10 @@ const MengapaSTHG = () => {
             </p>
 
             <a
-              href="#"
+              href="https://simaba.sthg.ac.id/"
               className="mt-8 inline-block rounded bg-gradient-to-r from-red-700 to-black hover:bg-gradient-to-r hover:from-black hover:to-red-700 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:ring focus:ring-yellow-400"
             >
-              Daftar Sekrang
+              Daftar Sekarang
             </a>
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 mt-8">

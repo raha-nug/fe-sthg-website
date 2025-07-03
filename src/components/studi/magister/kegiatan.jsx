@@ -9,7 +9,7 @@ const Kegiatan = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://sthg.labtekcmr.com/api/cms/getKegiatanS2Hukum"
+        `${process.env.NEXT_PUBLIC_API_URL}/api/cms/getKegiatanS2Hukum`
       );
       setData(response.data.data);
     } catch (error) {
@@ -37,9 +37,9 @@ const Kegiatan = () => {
                 10th Oct 2022{" "}
               </time> */}
 
-              <a href="#">
+              <p>
                 <h3 className="mt-0.5 text-lg text-gray-900">{data.judul}</h3>
-              </a>
+              </p>
 
               <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
                 {data.deskripsi_kegiatan}

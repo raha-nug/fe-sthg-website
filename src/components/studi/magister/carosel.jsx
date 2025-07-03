@@ -11,7 +11,7 @@ const JumbotronKaprodi = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getStafS2Hukum"
+          `${process.env.NEXT_PUBLIC_API_URL}/api/cms/getStafS2Hukum`
         );
 
         setData(response.data.data);
@@ -104,9 +104,9 @@ const JumbotronKaprodi = () => {
             />
           </div>
           <div className="md:w-1/2 flex flex-col items-center justify-center">
-            <h2 className="text-5xl font-bold text-black">{item.nama}</h2>
+            <h2 className="text-4xl font-bold text-black">{item.nama}</h2>
             <p className=" text-2xl text-black">{item.jabatan}</p>
-            <p className="text-2xl text-black">{item.deskripsi_jabatan}</p>
+            {/* <p className="text-2xl text-black">{item.deskripsi_jabatan}</p> */}
           </div>
         </div>
       ))}

@@ -66,7 +66,7 @@ const menuItems = [
         icon: GraduationCap,
       },
       {
-        label: "Master Hukum (S2)",
+        label: "Magister Hukum (S2)",
         href: "/program-studi/master",
         icon: GraduationCap,
       },

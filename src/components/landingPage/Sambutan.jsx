@@ -8,6 +8,7 @@ import LanguageSwitcher from "../LanguageSwitcher";
 
 const Sambutan = () => {
   const [data, setData] = useState([]);
+  console.log("Sambutan", data);
   const { language } = useLanguageStore();
 
   const texts = {
@@ -37,7 +38,7 @@ const Sambutan = () => {
   }, []);
 
   return (
-    <div className="bg-[#fff] w-full relative">
+    <div className="bg-[#fff] w-full relative py-8">
       {/* <JudulComponent title="Sambutan Ketua" /> */}
       {/* <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +70,7 @@ const Sambutan = () => {
             <div className="mx-auto  max-w-xl text-center sm:text-left ">
               <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
                 {/* {data.judul} */}
-                {texts[language].greeting}
+                {data.judul}
               </h2>
 
               <p className=" text-gray-500 md:mt-4 md:block text-justify">
@@ -81,7 +82,7 @@ const Sambutan = () => {
           <img
             alt=""
             src={data.foto}
-            className="h-full w-full md:w-1/2 sm:rounded-ss-[30px]  md:rounded-ss-[60px] order-1 sm:order-2"
+            className="h-full w-[500px] md:w-1/4 object-cover rounded-full order-1 sm:order-2"
           />
         </section>
       ))}

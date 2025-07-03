@@ -87,7 +87,7 @@ const TabsAkreditasi = ({ akreditasiS1, akreditasiS2, akreditasiKampus }) => {
                     <td className="px-6 py-4">{akreditasi.akreditasi}</td>
                     <td className="px-6 py-4">
                       <a href={akreditasi.file} target="_blank">
-                        Likat Akreditasi
+                        Lihat Akreditasi
                       </a>
                     </td>
                     <td className="px-6 py-4">{akreditasi.nomor_sk}</td>
@@ -132,7 +132,7 @@ const TabsAkreditasi = ({ akreditasiS1, akreditasiS2, akreditasiKampus }) => {
                     <td className="px-6 py-4">{akreditasi.akreditasi}</td>
                     <td className="px-6 py-4">
                       <a href={akreditasi.file} target="_blank">
-                        Likat Akreditasi
+                        Lihat Akreditasi
                       </a>
                     </td>
                     <td className="px-6 py-4">{akreditasi.no_sk}</td>
@@ -177,7 +177,7 @@ const TabsAkreditasi = ({ akreditasiS1, akreditasiS2, akreditasiKampus }) => {
                     <td className="px-6 py-4">{akreditasi.akreditasi}</td>
                     <td className="px-6 py-4">
                       <a href={akreditasi.file} target="_blank">
-                        Likat Akreditasi
+                        Lihat Akreditasi
                       </a>
                     </td>
                     <td className="px-6 py-4">{akreditasi.no_sk}</td>

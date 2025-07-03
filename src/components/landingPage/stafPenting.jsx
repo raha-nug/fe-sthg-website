@@ -104,15 +104,13 @@ export function CaroselStaf() {
               />
             </div>
             <div className="md:w-1/2 flex flex-col gap-4 items-center justify-center z-10">
-              <h2 className="text-4xl md:text-6xl font-bold text-white uppercase">
+              <h2 className="text-3xl font-bold text-white uppercase">
                 {item.nama}
               </h2>
-              <p className="text-white text-2xl font-semibold">
-                {item.jabatan}
-              </p>
-              <p className="text-white text-xl font-semibold">
+              <p className="text-white text-xl font-semibold">{item.jabatan}</p>
+              {/* <p className="text-white text-xl font-semibold">
                 {item.deskripsi_jabatan}
-              </p>
+              </p> */}
             </div>
           </div>
         ))}

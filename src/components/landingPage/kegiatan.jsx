@@ -26,7 +26,7 @@ export function KegiatanSTHG() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getKegiatan"
+          `${process.env.NEXT_PUBLIC_API_URL}/api/cms/getKegiatan`
         );
         setKegiatan(response.data.data);
       } catch (error) {
@@ -47,7 +47,7 @@ export function KegiatanSTHG() {
       <div className="w-full relative  py-10 mx-auto pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {kegiatan.length === 0 && <CardPlacehoderSkeleton />}
 
-        {kegiatan.map((item, key) => (
+        {kegiatan.slice(0, 3).map((item, key) => (
           <Card className="mt-6 w-full">
             <CardHeader color="blue-gray" className="relative h-56">
               <img src={item.foto} alt="card-image" />

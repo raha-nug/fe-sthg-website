@@ -27,7 +27,7 @@ const BeritaSTHG = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getBerita"
+          `${process.env.NEXT_PUBLIC_API_URL}/api/cms/getBerita`
         );
         setBerita(response.data.data);
       } catch (error) {
@@ -58,8 +58,8 @@ const BeritaSTHG = () => {
         <div className="w-full relative  mx-auto  pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {berita.length === 0 && <CardPlacehoderSkeleton />}
 
-          {berita.map((item, key) => (
-            <Card className="mt-6 w-full">
+          {berita.slice(0, 3).map((item, key) => (
+            <Card key={key} className="mt-6 w-full">
               <CardHeader color="blue-gray" className="relative h-56">
                 <img src={item.foto} alt="card-image" />
               </CardHeader>
@@ -74,7 +74,7 @@ const BeritaSTHG = () => {
               </CardBody>
               <CardFooter className="pt-0">
                 <a href={`/detail-berita/${item.slug}`}>
-                  <Button> Read More</Button>
+                  <Button>Read More</Button>
                 </a>
               </CardFooter>
             </Card>

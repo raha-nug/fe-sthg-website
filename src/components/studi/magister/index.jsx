@@ -113,7 +113,7 @@ const prospek = [
   },
   {
     id: 19,
-    nilai: "DLL",
+    nilai: "LAINNYA",
     keterangan:
       "Prospek karir lainnya dalam bidang hukum yang meliputi berbagai posisi di sektor publik dan swasta yang memerlukan pengetahuan hukum dan keterampilan analitis.",
   },
@@ -121,7 +121,7 @@ const prospek = [
 const Master = () => {
   return (
     <div>
-      <Jumbotron judul={"Program Master Hukum"} img={"/gambar/hukum.jpeg"} />
+      <Jumbotron judul={"Program Magister Hukum"} img={"/gambar/hukum.jpeg"} />
       <nav
         className="flex py-6 px-6 md:px-16  md:border-b shadow-md md:shadow-none"
         aria-label="Breadcrumb"
@@ -185,7 +185,7 @@ const Master = () => {
                 />
               </svg>
               <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">
-                Master-Hukum
+                Magister-Hukum
               </span>
             </div>
           </li>
@@ -201,7 +201,7 @@ const Master = () => {
                   className="text-3xl font-bold sm:text-4xl delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0"
                   data-taos-offset="300"
                 >
-                  Program Studi Ilmu Hukum
+                  Program Studi S2 Hukum
                 </h2>
 
                 <p className="mt-4 text-gray-300">

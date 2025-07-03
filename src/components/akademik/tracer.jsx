@@ -1472,7 +1472,8 @@ export function DefaultStepper() {
     // }
     try {
       const response = await axios.post(
-        "https://sthg.labtekcmr.com/api/addTracer",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/addTracer`,
+
         formData,
         {
           headers: {
@@ -1482,7 +1483,7 @@ export function DefaultStepper() {
       );
       console.log(response.data);
       toast.success("Data berhasil diupload");
-      route.push("/finished");
+      route.push("/tracer-study/finished");
     } catch (error) {
       console.error(
         "Error uploading file:",

@@ -261,7 +261,7 @@ const Navbar = () => {
                         href="/program-studi/master"
                         className="w-full h-full rounded-none"
                       >
-                        Master Hukum
+                        Magister Hukum
                       </a>
                     </li>
                   </ul>
@@ -269,7 +269,7 @@ const Navbar = () => {
                 </div>
               </li>
               <li className="">
-                <a href="">PMB</a>
+                <a href="https://simaba.sthg.ac.id">PMB</a>
               </li>
               <li className="dropdown dropdown-hover h-full flex items-center relative group">
                 <div>
@@ -290,7 +290,7 @@ const Navbar = () => {
                     </li>
                     <li className="hover:bg-gradient-to-r  text-black from-red-700 to-black hover:text-white w-full">
                       <a
-                        href="https://pustaka.sthg.ac.id/"
+                        href="https://perpus.sthg.ac.id/"
                         className="w-full h-full rounded-none"
                       >
                         Perpustakaan
