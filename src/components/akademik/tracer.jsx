@@ -1474,14 +1474,11 @@ export function DefaultStepper() {
         }
       );
       console.log(response.data);
-      toast.success("Data berhasil diupload");
+      toast.success(response?.data?.message);
       route.push("/akademik/tracer-study/finished");
     } catch (error) {
-      console.error(
-        "Error uploading file:",
-        error.response ? error.response.data : error.message
-      );
-      toast.error("Gagal mengupload data");
+      console.error("Error uploading file:", error.response?.data?.message);
+      toast.error(error.response?.data?.message);
     } finally {
       setIsLastStep(true);
     }
@@ -1491,6 +1488,7 @@ export function DefaultStepper() {
     <div className="w-full py-4 px-8 md:w-1/2">
       <ToastContainer />
       <Stepper
+        className="w-full"
         activeStep={activeStep}
         isLastStep={(value) => setIsLastStep(value)}
         isFirstStep={(value) => setIsFirstStep(value)}

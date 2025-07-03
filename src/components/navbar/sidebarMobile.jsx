@@ -67,7 +67,7 @@ const menuItems = [
       },
       {
         label: "Magister Hukum (S2)",
-        href: "/program-studi/master",
+        href: "/program-studi/magister",
         icon: GraduationCap,
       },
     ],
@@ -83,7 +83,7 @@ const menuItems = [
       },
       {
         label: "Perpustakaan",
-        href: "https://pustaka.sthg.ac.id/",
+        href: "https://perpus.sthg.ac.id/",
         icon: BookText,
       },
       {

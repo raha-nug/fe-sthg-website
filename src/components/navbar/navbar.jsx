@@ -258,7 +258,7 @@ const Navbar = () => {
                     </li>
                     <li className="hover:bg-gradient-to-r  text-black from-red-700 to-black hover:text-white w-full">
                       <a
-                        href="/program-studi/master"
+                        href="/program-studi/magister"
                         className="w-full h-full rounded-none"
                       >
                         Magister Hukum
