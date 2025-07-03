@@ -12,7 +12,7 @@ const Sejarah = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getSejarah"
+          process.env.NEXT_PUBLIC_API_URL + "/api/cms/getSejarah"
         );
         setData(response.data.data);
         console.log(response.data.data);
@@ -95,7 +95,9 @@ const Sejarah = () => {
           </li>
         </ol>
       </nav>
-      <Sambutan />
+      <div className="">
+        <Sambutan />
+      </div>
       <div className="px-4 md:px-16">
         <section className=" my-10">
           <div className="p-4 md:p-8 flex flex-col gap-10">

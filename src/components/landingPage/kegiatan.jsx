@@ -38,8 +38,8 @@ export function KegiatanSTHG() {
   console.log("Kegiatan", kegiatan);
   return (
     <div className="w-full  px-6 md:px-16 border-b-2 pb-20">
-      <div className="flex justify-between w-full items-center py-10">
-        <h1 className={`font-bold text-3xl md:text-3xl text-start text-[#000]`}>
+      <div className="flex justify-center w-full items-center py-10">
+        <h1 className={`font-bold text-2xl text-center text-[#01012e]`}>
           KEGIATAN STHG
         </h1>
       </div>
@@ -63,11 +63,20 @@ export function KegiatanSTHG() {
             </CardBody>
             <CardFooter className="pt-0">
               <a href={`/detail-kegiatan/${item.id_kegiatan}`}>
-                <Button> Read More</Button>
+                <Button className="bg-gradient-to-r from-red-700 to-black">
+                  {" "}
+                  Read More
+                </Button>
               </a>
             </CardFooter>
           </Card>
         ))}
+      </div>
+      <div className="flex justify-center w-full">
+        <Button className="flex  items-center justify-center bg-gradient-to-r from-red-700 to-black hover:bg-gradient-to-r hover:from-black hover:to-red-700  py-3 text-sm font-medium text-white transition hover:shadow focus:ring focus:ring-yellow-400">
+          <a href="/kegiatan">Kegiatan Lainnya</a>
+          <ChevronRight />
+        </Button>
       </div>
     </div>
   );

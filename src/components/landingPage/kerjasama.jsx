@@ -15,7 +15,7 @@ const Kerjasama = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getKerjasamaSTHG"
+        process.env.NEXT_PUBLIC_API_URL + "/api/cms/getKerjasamaSTHG"
       );
       setData(response.data.data);
     } catch (error) {
@@ -29,8 +29,8 @@ const Kerjasama = () => {
   }, []);
   return (
     <div className="w-full relative px-6 md:px-16 border-b-2 py-10">
-      <div className="flex justify-between w-full items-center mb-10">
-        <h1 className={`font-bold text-3xl md:text-3xl text-start text-[#000]`}>
+      <div className="flex justify-center w-full items-center mb-10">
+        <h1 className={`font-bold text-2xl  text-center text-[#000]`}>
           KERJASAMA KAMI
         </h1>
       </div>

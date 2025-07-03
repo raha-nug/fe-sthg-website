@@ -153,11 +153,91 @@ const Akreditasi = () => {
             kualitas program-program ini dapat dipertahankan dan ditingkatkan.
           </p>
         </div>
-        <TabsAkreditasi
+
+        <div className="relative overflow-x-auto">
+          <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead className="text-xs  uppercase bg-gray-900 text-white dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  Nama
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Akreditasi
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Lihat Akreditasi
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Nomor SK
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Masa Berlaku (dd/mm/yyyy)
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {akreditasiKampus.map((akreditasi) => (
+                <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    {akreditasi.institusi}
+                  </th>
+                  <td className="px-6 py-4">{akreditasi.akreditasi}</td>
+                  <td className="px-6 py-4">
+                    <a href={akreditasi.file} target="_blank">
+                      Lihat Akreditasi
+                    </a>
+                  </td>
+                  <td className="px-6 py-4">{akreditasi.nomor_sk}</td>
+                  <td className="px-6 py-4">{akreditasi.masa_berlaku}</td>
+                </tr>
+              ))}
+              {akreditasiS1Hukum.map((akreditasi) => (
+                <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    {akreditasi.institusi}
+                  </th>
+                  <td className="px-6 py-4">{akreditasi.akreditasi}</td>
+                  <td className="px-6 py-4">
+                    <a href={akreditasi.file} target="_blank">
+                      Lihat Akreditasi
+                    </a>
+                  </td>
+                  <td className="px-6 py-4">{akreditasi.no_sk}</td>
+                  <td className="px-6 py-4">{akreditasi.masa_berlaku}</td>
+                </tr>
+              ))}
+              {akreditasiS2Hukum.map((akreditasi) => (
+                <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    {akreditasi.institusi}
+                  </th>
+                  <td className="px-6 py-4">{akreditasi.akreditasi}</td>
+                  <td className="px-6 py-4">
+                    <a href={akreditasi.file} target="_blank">
+                      Lihat Akreditasi
+                    </a>
+                  </td>
+                  <td className="px-6 py-4">{akreditasi.no_sk}</td>
+                  <td className="px-6 py-4">{akreditasi.masa_berlaku}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {/* <TabsAkreditasi
           akreditasiS1={akreditasiS1Hukum}
           akreditasiKampus={akreditasiKampus}
           akreditasiS2={akreditasiS2Hukum}
-        />
+        /> */}
       </div>
     </div>
   );

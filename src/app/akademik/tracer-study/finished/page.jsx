@@ -1,4 +1,4 @@
-const { default: SuccessPage } = require("@/components/akademik/finished");
+import SuccessPage from "@/components/akademik/finished";
 
 const Success = () => {
   return <SuccessPage />;

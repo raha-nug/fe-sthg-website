@@ -13,7 +13,7 @@ const CardSwiper = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getFasilitas"
+          process.env.NEXT_PUBLIC_API_URL + "/api/cms/getFasilitas"
         );
         setData(response.data.data);
         console.log(response.data.data);

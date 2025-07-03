@@ -1462,14 +1462,6 @@ export function DefaultStepper() {
   ];
 
   const handleUpload = async () => {
-    // const isEmpty = Object.values(formData).some(
-    //   (value) => value === "" || (Array.isArray(value) && value.length === 0)
-    // );
-
-    // if (isEmpty) {
-    //   toast.error("Semua field harus diisi!", { position: "top-right" });
-    //   return;
-    // }
     try {
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/api/addTracer`,
@@ -1483,7 +1475,7 @@ export function DefaultStepper() {
       );
       console.log(response.data);
       toast.success("Data berhasil diupload");
-      route.push("/tracer-study/finished");
+      route.push("/akademik/tracer-study/finished");
     } catch (error) {
       console.error(
         "Error uploading file:",

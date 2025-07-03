@@ -27,8 +27,9 @@ const TracerStudy = () => {
   return (
     <div>
       {/* <Jumbotron judul="Tracer Mahasiswa" /> */}
-      <div className="flex justify-center pt-40">
+      <div className="flex flex-col justify-center items-center pt-40">
         {/* <CheckoutForm /> */}
+        <h1 className="text-3xl font-bold text-center">Tracer Study</h1>
         <DefaultStepper />
       </div>
     </div>

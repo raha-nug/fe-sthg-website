@@ -34,7 +34,7 @@ const Berita = () => {
       <Jumbotron judul="Berita STHG" />
       <div className="mx-auto max-w-3xl text-center py-10">
         <h2 className="text-3xl font-bold sm:text-4xl uppercase">
-          Berita Sekolah Tinggi Hukum Galunggung
+          Kegiatan Sekolah Tinggi Hukum Galunggung
         </h2>
       </div>
       <div className="w-full relative  py-10 mx-auto pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
