@@ -31,11 +31,7 @@ const Akreditasi = () => {
       try {
         console.log("🔄 Fetching data...");
         const response = await axios.get(
-<<<<<<< HEAD
           `${process.env.NEXT_PUBLIC_API_URL}/api/cms/getAkreditasiKampus`,
-=======
-          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getAkreditasiKampus",
->>>>>>> 783c9323e859999f17e37089d7fccfd8efb7c24f
           {
             headers: {
               "Content-Type": "application/json",
@@ -53,11 +49,7 @@ const Akreditasi = () => {
       try {
         console.log("🔄 Fetching data...");
         const response = await axios.get(
-<<<<<<< HEAD
           `${process.env.NEXT_PUBLIC_API_URL}/api/cms/getAkreditasiKampus`,
-=======
-          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getAkreditasiKampus",
->>>>>>> 783c9323e859999f17e37089d7fccfd8efb7c24f
           {
             headers: {
               "Content-Type": "application/json",

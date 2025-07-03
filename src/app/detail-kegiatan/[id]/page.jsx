@@ -28,10 +28,6 @@ const DetailKegiatan = () => {
     fetchDetail();
   }, []);
   console.log(detail);
-<<<<<<< HEAD
-=======
- 
->>>>>>> 783c9323e859999f17e37089d7fccfd8efb7c24f
 
   const formatDate = (dateString) => {
     return dateString.split("T")[0];
