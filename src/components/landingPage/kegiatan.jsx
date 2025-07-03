@@ -26,11 +26,7 @@ export function KegiatanSTHG() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-<<<<<<< HEAD
           `${process.env.NEXT_PUBLIC_API_URL}/api/cms/getKegiatan`
-=======
-          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getKegiatan"
->>>>>>> 783c9323e859999f17e37089d7fccfd8efb7c24f
         );
         setKegiatan(response.data.data);
       } catch (error) {
@@ -51,13 +47,8 @@ export function KegiatanSTHG() {
       <div className="w-full relative  py-10 mx-auto pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {kegiatan.length === 0 && <CardPlacehoderSkeleton />}
 
-<<<<<<< HEAD
         {kegiatan.slice(0, 3).map((item, key) => (
           <Card className="mt-6 w-full">
-=======
-        {kegiatan.map((item, key) => (
-          <Card key={key} className="mt-6 w-full">
->>>>>>> 783c9323e859999f17e37089d7fccfd8efb7c24f
             <CardHeader color="blue-gray" className="relative h-56">
               <img src={item.foto} alt="card-image" />
             </CardHeader>
