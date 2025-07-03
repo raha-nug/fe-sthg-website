@@ -2,7 +2,8 @@
 const nextConfig = {
   output: "standalone",
   images: {
-    domains: ["sthg.labtekcmr.com"],
+   
+    domains: ['api.sthg.ac.id'],
   },
 };
 

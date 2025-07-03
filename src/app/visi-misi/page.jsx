@@ -23,7 +23,7 @@ export default function VisiMisi() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://sthg.labtekcmr.com/api/cms/getVisiMisi"
+          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+"/api/cms/getVisiMisi"
         );
         setData(response.data.data);
         console.log(response.data.data);

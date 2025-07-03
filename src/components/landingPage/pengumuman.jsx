@@ -6,7 +6,7 @@ import JudulComponent from "@/items/judulPage";
 import useLanguageStore from "@/store/useLanguageStore";
 
 export function Pengmuman() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const apiUrl = process.env.NEXT_PUBLIC_BACKEND_BASE_URL;
   const [data, setData] = useState([]);
   const { language } = useLanguageStore();
 
